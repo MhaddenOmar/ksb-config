@@ -1,10 +1,11 @@
-# EMBEDDED SERVER CONFIGURATION
+q# EMBEDDED SERVER CONFIGURATION
 server:
     port: ${port:8090}
 
 spring:
     aop:
         proxyTargetClass: true
+
 # ZULL
 zuul:
   routes:
@@ -16,7 +17,7 @@ zuul:
       path: /oauth/**
       stripPrefix: false
     # ai-service should be moved to path other than /
-    api-service:
+    ksb-api-products:
       sensitiveHeaders:
       path: /api/**
       stripPrefix: true
