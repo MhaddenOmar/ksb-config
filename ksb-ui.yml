@@ -24,12 +24,12 @@ zuul:
           sensitiveHeaders:
           path: /oauth/**
           stripPrefix: false
-          serviceId: gateway-service
+          serviceId: ksb-gateway
      gateway-service-api:
           sensitiveHeaders:
           path: /api/**
           stripPrefix: false
-          serviceId: gateway-service
+          serviceId: ksb-gateway
   add-proxy-headers: true
 #SECURITY
 security:
