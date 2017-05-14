@@ -24,8 +24,6 @@ zuul:
   add-proxy-headers: true
 #SECURITY
 security:
-  user:
-    password: password
   oauth2:
     client:
       accessTokenUri: http://localhost:9999/oauth/token
