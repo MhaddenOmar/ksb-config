@@ -11,7 +11,7 @@ zuul:
   routes:
     user:
       path: /user/**
-      url: http://localhost:9999/uaa/user
+      url: http://localhost:9999/user
     ksb-auth:
       sensitiveHeaders:
       path: /oauth/**
