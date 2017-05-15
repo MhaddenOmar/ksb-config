@@ -1,0 +1,22 @@
+server:
+  port: 7070
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springbootdb
+    username:
+    password:
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+          jwt:
+            keyValue: |
+                 -----BEGIN PUBLIC KEY-----
+                 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/IMQ+H79ccMt77OS1zGgxV9uHL5CAI4OQ8OTa3VXMwXDVIn3zZb8Knwgd9QxQQWK+9DnMp0y+jPGVIgiiA8FU5nlGrZ2yfZqBGEgR0L+EUY2IGC1ew1u50p+lqz79D5+G7B5RkhC9Tiu/d2iOsnULuIlasfLO520hNR6Zib1Ezwf5Xnj/GGkpKJMmmhOEQG35DkZwGA4/AvWX/giTQ157HpQEthhe8YLJIu1RyoIFNjQbiJWnDkP7mFqctmWucyaUfS71a15E5DXDDytQX5zPh78NYlGIMvvtT6IgY4560UGAtpOSg/wiYFakQOan5PU9Fcnx1ykS54wUQoQFBQ7QIDAQAB
+                 -----END PUBLIC KEY-----
+          id: openid
+          serviceId: ${PREFIX:}resource
