@@ -2,8 +2,9 @@ server:
     port: ${port:8084}
     error.whitelabel.enabled: false
 
-
-security
+#security:
+#  basic:
+#    enabled: false
 #security:
 #  user:
 #    password: password
