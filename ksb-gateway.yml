@@ -23,6 +23,11 @@ zuul:
       stripPrefix: true
   add-proxy-headers: true
 #SECURITY
+
+security:
+  basic:
+    enabled: false
+
 #security:
 #  oauth2:
 #    client:
