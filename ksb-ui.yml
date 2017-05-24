@@ -15,8 +15,8 @@ spring:
 # EUREKA
 eureka:
   client:
-    registerWithEureka: true
-    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://ksb-discovery:8761/eureka/}
 # ZULL
 zuul:
   routes:
@@ -46,12 +46,6 @@ security:
               -----END PUBLIC KEY-----
       id: openid
       serviceId: ${PREFIX:}resource
-
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://ksb-discovery:8761/eureka/}
 #  oauth2:
 #    sso:
 #      loginPath: /login
