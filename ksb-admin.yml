@@ -7,6 +7,10 @@ management:
 security:
   basic:
     enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://ksb-discovery:8761/eureka/}
 #security:
 #  user:
 #    password: password

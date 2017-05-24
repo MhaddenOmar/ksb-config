@@ -39,6 +39,12 @@ security:
       id: openid
       serviceId: ${PREFIX:}resource
 
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://ksb-discovery:8761/eureka/}
+
 #security:
 #  oauth2:
 #    client:
