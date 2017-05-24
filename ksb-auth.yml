@@ -1,0 +1,13 @@
+server:
+  port: 9999
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: createdrop
+  datasource:
+    url: jdbc:postgresql://169.47.249.241:31548/springbootauth
+    username: postgres
+    password: User
+security:
+  user:
+    password: password
