@@ -11,3 +11,7 @@ spring:
 security:
   user:
     password: password
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://ksb-discovery:8761/eureka/}
