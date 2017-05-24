@@ -3,11 +3,11 @@ server:
 spring:
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create-drop
   datasource:
-    url: jdbc:postgresql://localhost:5432/springbootdb
+    url: jdbc:postgresql://169.47.249.241:31548/springbootdb
     username: postgres
-    password: user
+    password: User
 security:
   basic:
     enabled: false
