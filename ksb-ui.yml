@@ -21,7 +21,7 @@ eureka:
 
 hystrix:
   command:
-    default:
+    ksb-gateway:
       execution:
         isolation:
           thread:
