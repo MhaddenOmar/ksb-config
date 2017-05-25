@@ -3,9 +3,9 @@ server:
 spring:
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create-drop
   datasource:
-    url: jdbc:postgresql://169.47.249.241:31548/springbootdb
+    url: jdbc:postgresql://50.23.5.178:32158/springbootdb
     username: postgres
     password: User
 security:
