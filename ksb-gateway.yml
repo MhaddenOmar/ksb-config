@@ -7,16 +7,6 @@ spring:
         proxyTargetClass: true
 
 # ZULL
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 60000
-
 zuul:
   routes:
     user:
@@ -54,6 +44,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://ksb-discovery:8761/eureka/}
+  instance:
+      hostname: ksb-gateway
+      nonSecurePort: 80
 
 #security:
 #  oauth2:

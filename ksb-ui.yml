@@ -19,16 +19,6 @@ eureka:
       defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://ksb-discovery:8761/eureka/}
 # ZULL
 
-hystrix:
-  command:
-    ksb-ui:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
-        timeout:
-          enabled: false
-
 zuul:
   routes:
      gateway-service-oauth:
