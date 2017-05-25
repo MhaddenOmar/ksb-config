@@ -7,6 +7,8 @@ spring:
         proxyTargetClass: true
 
 # ZULL
+
+
 zuul:
   routes:
     user:
@@ -44,9 +46,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://ksb-discovery:8761/eureka/}
-  instance:
-      hostname: ksb-gateway
-      nonSecurePort: 80
 
 #security:
 #  oauth2:
