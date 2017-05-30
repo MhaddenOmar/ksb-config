@@ -13,6 +13,9 @@ spring:
         proxyTargetClass: true
 
 # EUREKA
+
+
+
 eureka:
   client:
     serviceUrl:
