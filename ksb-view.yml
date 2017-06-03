@@ -3,7 +3,7 @@ server:
 spring:
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
   datasource:
     url: jdbc:postgresql://50.23.5.178:32158/viewdb
     username: postgres
