@@ -22,6 +22,18 @@ eureka:
       defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://ksb-discovery:8761/eureka/}
 # ZULL
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+
+ribbon:
+  ReadTimeout: 60000
+
 zuul:
   routes:
      gateway-service-oauth:
@@ -32,6 +44,11 @@ zuul:
      gateway-service-api:
           sensitiveHeaders:
           path: /api/**
+          stripPrefix: false
+          serviceId: ksb-gateway
+     gateway-service-composite:
+          sensitiveHeaders:
+          path: /composite/**
           stripPrefix: false
           serviceId: ksb-gateway
   add-proxy-headers: true
@@ -99,9 +116,9 @@ spring:
 #      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
 
 # ZULL
-zuul:
-  routes:
-     gateway-service:
-          url: http://${eureka.instance.hostname}:8090
-     auth-service:
-          url: http://${eureka.instance.hostname}:8083
+#zuul:
+#  routes:
+#     gateway-service:
+#          url: http://${eureka.instance.hostname}:8090
+#     auth-service:
+#          url: http://${eureka.instance.hostname}:8083

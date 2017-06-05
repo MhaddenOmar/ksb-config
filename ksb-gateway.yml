@@ -8,7 +8,16 @@ spring:
 
 # ZULL
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
 
+ribbon:
+  ReadTimeout: 60000
 
 zuul:
   routes:
@@ -23,6 +32,10 @@ zuul:
     ksb-api-products:
       sensitiveHeaders:
       path: /api/**
+      stripPrefix: true
+    ksb-product-composite:
+      sensitiveHeaders:
+      path: /composite/**
       stripPrefix: true
   add-proxy-headers: true
 #SECURITY
