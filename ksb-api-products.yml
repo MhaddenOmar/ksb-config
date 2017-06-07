@@ -8,16 +8,6 @@ spring:
     url: jdbc:postgresql://50.23.5.178:32158/springbootdb
     username: postgres
     password: User
-  rabbitmq:
-    host: 192.168.99.100
-    port: 32781
-    username: user
-    password: user
-  cloud:
-    stream:
-      bindings:
-        input:
-          destination: ksb-car
 security:
   basic:
     enabled: false
