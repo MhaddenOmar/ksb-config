@@ -12,9 +12,23 @@ security:
                  -----END PUBLIC KEY-----
           id: openid
           serviceId: ${PREFIX:}resource
+
+spring:
+  rabbitmq:
+    host: 192.168.99.100
+    port: 32781
+    username: user
+    password: user
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: ksb-car
 eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://ksb-discovery:8761/eureka/}
+
+
 
 
